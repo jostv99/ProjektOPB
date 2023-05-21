@@ -1,13 +1,43 @@
 <html>
 
 <head>
+    <style type="text/css">
+        .sidenav {
+            height:100%;
+            width:100px;
+            position:fixed;
+            z-index:1;
+            top:0;
+            left:0;
+            background-color:yellowgreen;
+            overflow-x:hidden;
+            padding-top:20px;
+        }
+        .sidenav a {
+            padding:6px 8px 6px 10px;
+            text-decoration: none;
+            color:blue;
+            display:block;
+        }
 
-    <Title>{% block title %}Spletna trgovina Uš{% endblock %}</Title>
+        .sidenav a:hover{
+            color: orange;
+        }
+        
+        .main {
+            margin-left:120px;
+            padding: 0px 10px;
+        }
+    </style>
+    <Title>{% block title %}<a href="/">Spletna trgovina Uš</a>{% endblock %}</Title>
 </head>
 <body>
-    <div id="content", name="content">
+    <div class="sidenav">
+        <a href="/">Homepage</a>
+        <a href="/new_ad/">Create new listing</a>
+    </div>
+    <div id="content", name="content", class="main">
         {% block content %}
-            <p>blabla</p>
         {% endblock %}
     </div>
     

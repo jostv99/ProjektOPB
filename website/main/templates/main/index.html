@@ -2,10 +2,10 @@
 {% block title %}Today's ads{% endblock %}
 
 {% block content %}
-<h1>New</h1>
+<h1>New listings</h1>
 <ul>
     {% for ad in ads %}
-        <li>ad.title</li>
+        <li>{{ad.title}} -- {{ad.price}}eur</li>
     {% endfor %}
 </ul>
 {% endblock %}
