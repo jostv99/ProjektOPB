@@ -1,0 +1,14 @@
+{% extends "main/base.html" %}
+{% block title %}Today's ads{% endblock %}
+
+{% block content %}
+<h1>New</h1>
+<ul>
+    {% for ad in ads %}
+        <li>ad.title</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+
+
