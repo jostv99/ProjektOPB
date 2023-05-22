@@ -34,13 +34,19 @@
 <body>
     <div class="sidenav">
         <a href="/">Homepage</a>
-        <a href="/new_ad/">Create new listing</a>
+
+        {% if user.is_authenticated %}
+            <a href="/new_ad/">Create new listing</a>             
+        {% else %}
+            <a href="/login/">Login</a>
+            <a href="/sign_up/">Sign up</a>        
+        {% endif %}
     </div>
     <div id="content", name="content", class="main">
+        <h1>Spletna stran uš</h1>
         {% block content %}
         {% endblock %}
     </div>
-    
 
 </body>
 

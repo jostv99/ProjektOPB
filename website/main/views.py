@@ -7,9 +7,6 @@ def index(response):
     ads = Ad.objects.all()
     return render(response, "main/index.html", {"ads":ads})
 
-def login(response):
-    return render(response, "main/login.html", {})
-
 def new_ad(response):
     if response.method == "POST":
         form = CreateNewListing(response.POST)
